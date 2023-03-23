@@ -1,0 +1,70 @@
+package com.selenium.basics;
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class WindowHandlingWindow 
+{
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		
+		
+		WebDriver driver=new ChromeDriver();
+		
+		driver.get("https://www.facebook.com");
+		
+		driver.manage().window().maximize();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
+		System.out.println(driver.getTitle());
+		
+		System.out.println(driver.getCurrentUrl());
+		
+		String parentwindow=driver.getWindowHandle();
+		
+		System.out.println(parentwindow);
+		
+		driver.switchTo().newWindow(WindowType.WINDOW).get("https://www.axisbank.com");
+		
+		driver.switchTo().newWindow(WindowType.WINDOW).get("https://www.makemytrip.com");
+		
+		driver.switchTo().newWindow(WindowType.WINDOW).get("https://www.ticketnew.com");
+		
+		driver.switchTo().newWindow(WindowType.WINDOW).get("https://www.tnpsc.com");
+		
+		driver.switchTo().newWindow(WindowType.WINDOW).get("https://www.instagram.com");
+		
+		Set<String> childwindow=driver.getWindowHandles();
+		
+		System.out.println(childwindow);
+		
+		List <String> list=new ArrayList<>(childwindow);
+		
+		System.out.println(list.size());
+		
+		driver.switchTo().window(list.get(1));
+		
+		System.out.println(driver.getTitle());
+		
+		System.out.println(driver.getCurrentUrl());
+		
+		driver.switchTo().window(list.get(0));
+		
+		System.out.println(driver.getTitle());
+		
+		System.out.println(driver.getCurrentUrl());
+		
+		
+	}
+
+
+
+}

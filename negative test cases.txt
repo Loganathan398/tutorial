@@ -1,0 +1,18 @@
+FIVE NEGATIVE TEST CASES
+
+Testcase id     Testmodule          Testcase                     Testdata                                       Actualresult         
+TC01             loginpage     verify the login page    without entering username and password.click on    does not navigate  
+                                                         login button                                              
+
+TC02             loginpage      verify login page        invalid username valid password                   does not navigate   
+
+TC03            login page       verify login page        valid username invalid password                   does not navigate   
+
+TC04            loginpage         verifylogin page        passwordfield should not accept1-4 characters.    does not navigate   
+
+TC05            loginpage         verifylogin page        passwordfirld should not accept any characters     does not navigate
+                                                            outside of numbers or letters.
+
+                                                                        
+TC06            loginpage        verifylogin page         username field should not accept combinations of    does not navigate  
+                                                          letters and numbers. 

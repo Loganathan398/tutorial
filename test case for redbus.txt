@@ -1,0 +1,30 @@
+FEW TEST CASES FOR  BOOKING TICKETS IN RED BUS
+
+
+
+Testcase id     Testmodule    Testscenario                          Testcase                                                                            Actualresult
+
+
+
+TC01            REDBUS         LOGIN PAGE             check whether the page can log in without providing the user with                  not navigate to home page   
+                                                       any details. 
+TC02            REDBUS         LOGIN PAGE             Check and log in to the page with valid username and password.                     navigate to home page
+
+TC03            REDBUS          BOOKING DATAS         check whether the applications is accepting date in DD/MM/YY format.                accepting.
+
+TC04            REDBUS          BOOKING DATAS          check whether the applications are showing correct boarding places.                 showing correctly.
+
+TC05            REDBUS          BOOKING DATAS          Check whether the application showing correct departure places.                     showing correctly.
+
+TC06            REDBUS          BOOKING DATA            Check the website to see whether there is any functionality for                     showing all.
+                                                        adding new buses.                                                                  
+
+TC07           REDBUS          BOOKING DATAS           check whether the drop-down list box are lists the name of boarding and departure     showing properly.
+                                                         places to select location.                                                       
+
+TC08           REDBUS          BOOKIND DATAS           After completing bookings, the user will receive mail or not.                         mails received.
+
+TC09           REDBUS          PAYMENT MODE            check whether all the different paymeny options are working properly.                   works properly.
+
+TC10           REDEBUS         PAYMENT MODE            check a booked tickets after cancelling that. the money shouls be refunded             woking correctly.
+                                                        to the same bank account or not.                                                    
